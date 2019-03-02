@@ -2,6 +2,8 @@ This is a simple project I made to be able to use gears of war pc 2007 without s
 
 This works on legit copies of gears of war 2007, I've not tested on any cracked copies, or any garbage like that.
 
+Still a WIP, can load menus/cut scenes, can't start campaign or sign-in yet.
+
 To use:
 
 1) Get a copy of https://github.com/KILLER-CHIEF/xlivelessness dll
