@@ -1,5 +1,51 @@
 #include "util.h"
 
+FILE* gowLogFile = nullptr;
+
+void write_time(FILE* logHandle)
+{
+	SYSTEMTIME t;
+	GetLocalTime(&t);
+	fwprintf(logHandle, L"%02d/%02d/%04d %02d:%02d:%02d.%03d ", t.wDay, t.wMonth, t.wYear, t.wHour, t.wMinute, t.wSecond, t.wMilliseconds);
+}
+
+void log(char* format, ...)
+{
+	if (!gowLogFile) {
+		gowLogFile = fopen("log.txt", "wt");
+	}
+
+	va_list	arg;
+	va_start(arg, format);
+
+	write_time(gowLogFile);
+
+	vfprintf(gowLogFile, format, arg);
+	fprintf(gowLogFile, "\n");
+
+	va_end(arg);
+
+	fflush(gowLogFile);
+}
+
+void logW(wchar_t* format, ...) {
+	if (!gowLogFile) {
+		gowLogFile = fopen("log.txt", "wt");
+	}
+
+	va_list	arg;
+	va_start(arg, format);
+
+	write_time(gowLogFile);
+
+	vfwprintf(gowLogFile, format, arg);
+	fwprintf(gowLogFile, L"\n");
+
+	va_end(arg);
+
+	fflush(gowLogFile);
+}
+
 void WriteBytes(DWORD destAddress, LPVOID bytesToWrite, int numBytes)
 {
 	DWORD OldProtection;
