@@ -29,7 +29,9 @@ debug_log debug_log_method;
 
 int __cdecl debugLog(wchar_t *a1, size_t a2, size_t a3, const wchar_t **a4, va_list a5) {
 	int result = debug_log_method(a1, a2, a3, a4, a5);
-	logW(a1);
+	if (a1 && wcslen(a1) > 0) {
+		logW(a1);
+	}
 	return result;
 }
 
