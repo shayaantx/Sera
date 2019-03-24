@@ -1,4 +1,4 @@
-This is a simple project I made to be able to use gears of war pc 2007 without startup.exe (easier to debug the wargame executable directly, since the game is designed to be run directly from startup.exe). It is also meant to be used directly with https://github.com/KILLER-CHIEF/xlivelessness when its completed for possible future multiplayer stuff (lan only for now).
+This is a simple project I made to be able to use gears of war pc 2007 without startup.exe (easier to debug the wargame executable directly, since the game is designed to be run directly from startup.exe). It is also meant to be used directly with https://github.com/KILLER-CHIEF/xlivelessness when its completed for possible future multiplayer stuff (lan only for now). Probably use my fork of xlivelessness till KC finishes his version.
 
 This works on legit copies of gears of war 2007, I've not tested on any cracked copies, or any garbage like that.
 
