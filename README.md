@@ -6,7 +6,7 @@ Still a WIP, can load menus/cut scenes, and launch campaign. Can sign in with my
 
 To use:
 
-1) Get a copy of https://github.com/KILLER-CHIEF/xlivelessness dll
+1) Get a copy of https://github.com/shayaantx/xlivelessness dll
 2) Put the xlivelessness dll into gears of war "Binaries" folder
 3) Create the following folder path in "Binaries", "xlln\modules"
 4) Put the dll from this project in "xlln\modules"
